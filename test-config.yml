@@ -1,6 +1,6 @@
 schemaVersion: '2.0.0'
 commandTests:
-  - name: "docker-compose installation"
-    command: "docker-compose"
-    args: ["-v"]
-    expectedOutput: ["docker-compose version 1.24.1*"]
+  - name: "certbot installation"
+    command: "certbot"
+    args: ["--version"]
+    expectedOutput: ["certbot 0.23.0"]
