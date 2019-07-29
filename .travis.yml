@@ -1,0 +1,15 @@
+sudo: required
+
+language: bash
+
+services:
+  - docker
+
+before_install:
+  - make pre-test
+
+script:
+  - make build
+  - make test
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - make push
